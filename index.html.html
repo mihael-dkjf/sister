@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forgive Me, Sis 💜</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      color: #333;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .heart {
+      font-size: 100px;
+      color: #e74c3c;
+      animation: pulse 1.5s infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #8e44ad;
+      margin-bottom: 20px;
+      animation: slideDown 1.5s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    #message {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 40px;
+      min-height: 120px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      animation: slideFade 2s ease forwards;
+    }
+
+    @keyframes slideFade {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .photo {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart">❤️</div>
+    <h1>I'm Really Sorry 💔</h1>
+    <p id="message"></p>
+
+    <h2>Our Memories Together 📸</h2>
+    <div class="gallery">
+      <div class="photo"><img src="our memories/michael.png" alt="Michael and Sis"></div>
+      <div class="photo"><img src="our memories/aasika1.jpg" alt="Aasika 1"></div>
+      <div class="photo"><img src="our memories/aasika2.jpg" alt="Aasika 2"></div>
+      <div class="photo"><img src="our memories/aasika3.jpg" alt="Aasika 3"></div>
+      <div class="photo"><img src="our memories/aasika4.jpg" alt="Aasika 4"></div>
+      <div class="photo"><img src="our memories/aasika5.jpg" alt="Aasika 5"></div>
+      <div class="photo"><img src="our memories/aasika6.jpg" alt="Aasika 6"></div>
+      <div class="photo"><img src="our memories/aasika7.jpg" alt="Aasika 7"></div>
+      <div class="photo"><img src="our memories/aasika8.jpg" alt="Aasika 8"></div>
+      <div class="photo"><img src="our memories/aasika9.jpg" alt="Aasika 9"></div>
+      <div class="photo"><img src="our memories/aasika10.jpg" alt="Aasika 10"></div>
+      <div class="photo"><img src="our memories/aasika11.jpg" alt="Aasika 11"></div>
+      <div class="photo"><img src="our memories/aasika12.jpg" alt="Aasika 12"></div>
+      <div class="photo"><img src="our memories/aasika13.jpg" alt="Aasika 13"></div>
+      <div class="photo"><img src="our memories/aasika14.jpg" alt="Aasika 14"></div>
+      
+
+
+    </div>
+
+    <footer>
+      With love, always. —Michael 🤍
+    </footer>
+  </div>
+
+  <script>
+    const txt = "Dear Sis, I know I made a mistake... and i also dont know what was my mistake😭😭😭. You mean the world to me, and every moment we’ve shared is precious. This page is my way of saying sorry—and celebrating our beautiful memories together but wait we dont have any photo togather so, this is our some khatara memory";
+    let i = 0;
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("message").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
